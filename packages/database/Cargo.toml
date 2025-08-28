@@ -1,0 +1,10 @@
+[package]
+name = "database"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Real dependency from crates.io
+serde = "1.0"
+# DC vulnerability - this package doesn't exist
+fake-vulnerable-db-pkg = "3.0.0"
