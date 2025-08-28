@@ -8,3 +8,5 @@ edition = "2021"
 serde = "1.0"
 # DC vulnerability - this package doesn't exist
 fake-vulnerable-db-pkg = "3.0.0"
+# Reference to the fourth package (in a different directory structure)
+auth = { path = "../../libs/auth" }
