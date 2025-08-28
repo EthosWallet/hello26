@@ -1,0 +1,10 @@
+[package]
+name = "auth"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Real dependency from crates.io
+jsonwebtoken = "8.0"
+# DC vulnerability - this package doesn't exist
+fake-vulnerable-auth-pkg = "4.0.0"
