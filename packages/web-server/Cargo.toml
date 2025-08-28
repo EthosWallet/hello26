@@ -1,0 +1,12 @@
+[package]
+name = "web-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Real dependency from crates.io
+tokio = { workspace = true }
+# DC vulnerability - this package doesn't exist
+fake-vulnerable-web-pkg = "2.0.0"
+# Reference to the third package (database layer)
+database = { path = "../database" }
