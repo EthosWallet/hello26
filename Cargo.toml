@@ -1,0 +1,19 @@
+[workspace]
+members = ["packages/web-server"]
+
+[workspace.dependencies]
+serde = "1.0"
+tokio = "1.0"
+
+[package]
+name = "root-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# This dependency exists in crates.io
+serde = { workspace = true }
+# This is a DC vulnerability - package doesn't exist
+fake-vulnerable-root-pkg = "1.0.0"
+# Workspace dependency reference
+web-server = { path = "packages/web-server" }
